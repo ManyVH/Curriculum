@@ -1,0 +1,178 @@
+.acomodo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+.acomodoP{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.alto{
+    height: 100vh;
+}
+
+body{
+    background: linear-gradient(45deg, rgba(37, 73, 255, 0.228), #ffffff2a);
+    
+    
+}
+.secciones{
+    width: 50%;
+}
+.contenido{
+    height: 95vh;
+    background-color: white;
+    width: 90%;
+    border: 1px solid gainsboro;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.542);
+    overflow-y: scroll;
+}
+
+.lineas{
+   
+    height: 4px;
+    background-color: rgb(105, 103, 103);
+}
+.lineasC{
+    height: 4px;
+    background-color: rgb(105, 103, 103);
+    width: 90%;
+}
+.btnMas{
+    border-radius: 30px;
+    
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0);
+    border-style: none;
+    
+}
+.btnBorrar{
+    border-radius: 30px;
+    width: 5%;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0);
+    border-style: none;
+    
+}
+.btnCrear{
+    width: 20%;
+    border-radius: 5px;
+    border: 1px solid gainsboro;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.542);
+    background-color: rgb(81, 203, 248);
+    color: white;
+    margin: 10px;
+    margin-bottom: 15px;
+}
+
+input{
+    border: 2px solid gainsboro;
+    
+}
+input:focus{
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.486);
+    
+}
+
+.formato{
+    border: 1px solid gainsboro;
+    width: 60%;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.486);
+}
+
+.formatoBtn{
+    width: 60%;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.fechas{
+    width: 50%;
+    border: 1px solid gainsboro;
+    background-color: rgb(241, 239, 239);
+    padding: none;
+    
+}
+.fechas input{
+    border: none;
+    background-color: rgb(241, 239, 239);
+    width: 100%;
+    
+}
+
+
+
+@media screen and (min-width: 400px ) and (max-width: 1200px){
+    .datosPE{
+        display: flex;
+        flex-direction: column;
+    }
+    .secciones{
+        width: 100%;
+    }
+    .fechas{
+        width: 55%;
+        
+        
+    }
+    .formato{
+        width: 70%;
+    }
+    .formatoBtn{
+        width: 70%;
+    }
+    .fechas input{
+        border: none;
+        background-color: rgb(241, 239, 239);
+        width: 100%;
+    }
+    
+}
+@media screen and (min-width: 1200px ){
+    .etiquetas{
+        padding-left: 10px;
+    }
+    .secciones{
+        width: 100%;
+    }
+    .fechas input{
+        border: none;
+        background-color: rgb(241, 239, 239);
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 400px ){
+    .secciones input{
+        width: 80%;
+    }
+    .secciones{
+        width: 100%;
+    }
+    .formato{
+        
+        width: 80%;
+        
+    }
+    .formatoBtn{
+        
+        width: 80%;
+        
+    }
+    .fechas input{
+        border: none;
+        background-color: rgb(241, 239, 239);
+        width: 100%;
+    }
+}

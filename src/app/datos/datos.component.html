@@ -1,0 +1,117 @@
+<body>
+    <div class="container w-100 alto acomodoP ">
+        <div class="row  acomodo contenido ">
+            <div >
+                <h3 >Datos para Generar un Curriculums</h3>
+                <hr class="lineas">
+                <br>
+                <div class="ps-3">
+                    <h4>Datos Personales</h4>
+                    <hr class="lineasC">
+                    <div class="ps-3">
+                        <section #datosEstaticosP >
+                            <div class="datosPE">
+                            <label for="Fotografía">Fotografía:  &nbsp;</label>
+                            <input type="url" [(ngModel)]="foto" name="Fotografía" placeholder="URL">
+
+                            
+                            <label for="nombre" class="etiquetas">Nombre:  &nbsp;</label>
+                            <input type="text" [(ngModel)]="nombre" name="nombre" placeholder="Nombre">
+
+                            
+                            <label for="apellido " class="etiquetas">Apellidos:  &nbsp;</label>
+                            <input type="text" [(ngModel)]="apellido" name="apellido" placeholder="Apellidos">
+
+                            </div>
+                        </section>
+                        <br>
+                        <h5>Datos de Contacto</h5>
+                        <hr class="lineasC">
+                        <section #datosDinamicosP class="secciones">
+                            <h6>Emails</h6>
+                            <!-- emails dinamicos -->
+                            <div id="emails" >
+                                
+                                <span id="0"><input type="email" placeholder="Email">  <button class="btnBorrar"><img src="./assets/trash.png" alt=""></button></span>
+                                
+                            </div>
+
+                            <div class="acomodo pe-4">
+                                <button class="btnMas" (click)="agregarEmail()"><img src="./assets/add.png" ></button>
+                            </div>
+
+                            <h6>Telefonos</h6>
+                            <!-- Telefonos dinamicos -->
+                            <div id="telefonos">
+                                <span id="0"><input type="text" placeholder="Teléfono">  <button class="btnBorrar"><img src="./assets/trash.png" alt=""></button></span>
+                            </div>
+
+                            <div class="acomodo pe-4">
+                                <button class="btnMas" (click)="agregarTelefono()"><img src="./assets/add.png" ></button>
+                            </div>
+                        </section>
+
+                    </div>
+                   
+
+                </div>
+                <div class="ps-3 ">
+                    <h4>Formación Académica</h4>
+                    <hr class="lineasC">
+                    <section  class="secciones">
+                        <div id="academia" class="ps-3">
+
+                            <div id="0" class="formato">
+                                
+                                    <label for="grado">Grado:  &nbsp;</label>
+                                    <input type="text" name="grado" placeholder="Grado Académico">
+                                    <label for="ins">Institución:  &nbsp;</label>
+                                    <input type="text" name="ins" placeholder="Institución">
+                                    
+                                <div class="d-flex flex-row m-1">
+                                    <div id="inicio" class="fechas">
+                                        <label for="fechaI">Inicio</label>
+                                        <input type="number" name="fechaI" min="1900" max="2099" step="1" value="2014">
+                                    </div>
+                                    
+                                    <div id="fin" class="fechas">
+                                        <label for="fin">Finalización</label>
+                                        <input type="number" name="fin" min="1900" max="2099" step="1" value="2016">
+                                    </div>
+                                    
+                                    &nbsp;
+                                    <button class="btnBorrar"><img src="./assets/trash.png" alt=""></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="formatoBtn">
+                            <button class="btnMas" (click)="agregarAcademia()"><img src="./assets/add.png" ></button>
+                        </div>
+                    </section>
+                    
+                </div>
+                <div class="ps-3">
+                    <h4>Experiencia Laboral</h4>
+                    <hr class="lineasC">
+                    <div id="experiencia">
+                        <div id="0"></div>
+                    </div>
+                    <button class="btnMas" ><img src="./assets/add.png" ></button>
+                </div>
+                <div class="ps-3">
+                    <h4>Habilidades</h4>
+                    <hr class="lineasC">
+                    <div id="habilidades">
+                        <div id="0"></div>
+                    </div>
+                    <button class="btnMas" ><img src="./assets/add.png" ></button>
+                </div>
+            </div>
+            <button class="btnCrear" routerLink="/curriculum" (click)="pasarPagina()">Crear</button>
+            
+        </div>
+    </div>
+</body>
+    
+
