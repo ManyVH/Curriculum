@@ -1,0 +1,28 @@
+
+  <div #prin class="habilidades">
+    <span>
+      <label for="hab">Habilidad:</label>
+      <input type="text" name="hab" placeholder="Habilidad" />
+    </span>
+
+    <div class="subHab">
+      <div #rango class="d-flex flex-column dominio">
+        <label>Dominio</label>
+        <span class="estrellas"
+          ><span><img src="./assets/star.png" /></span
+        ></span>
+        <input
+          #valor
+          (change)="estrellasDominio(valor.value, rango)"
+          type="range"
+          min="1"
+          max="5"
+          step="1"
+          value="1"
+        />
+      </div>
+      <button class="btnBorrar" (click)="borrar(prin)"><img src="./assets/trash.png" /></button>
+    </div>
+  </div>
+  <br>
+

@@ -57,6 +57,7 @@ body{
     border-style: none;
     
 }
+
 .btnCrear{
     width: 20%;
     border-radius: 5px;
@@ -70,6 +71,7 @@ body{
 
 input{
     border: 2px solid gainsboro;
+    border-radius: 5px;
     
 }
 input:focus{
@@ -79,6 +81,7 @@ input:focus{
 
 .formato{
     border: 1px solid gainsboro;
+    border-radius: 5px;
     width: 60%;
     padding: 4px;
     display: flex;
@@ -112,7 +115,8 @@ input:focus{
 
 
 
-@media screen and (min-width: 400px ) and (max-width: 1200px){
+
+@media screen and (min-width: 450px ) and (max-width: 1200px){
     .datosPE{
         display: flex;
         flex-direction: column;
@@ -136,6 +140,13 @@ input:focus{
         background-color: rgb(241, 239, 239);
         width: 100%;
     }
+    .habilidades{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+   
+    
     
 }
 @media screen and (min-width: 1200px ){
@@ -153,7 +164,7 @@ input:focus{
 }
 
 
-@media screen and (max-width: 400px ){
+@media screen and (max-width: 450px ){
     .secciones input{
         width: 80%;
     }
@@ -175,4 +186,13 @@ input:focus{
         background-color: rgb(241, 239, 239);
         width: 100%;
     }
+
+    .habilidades{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+   
+   
 }

@@ -7,13 +7,17 @@ import { DatosComponent } from './datos/datos.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { CurriculumComponent } from './curriculum/curriculum.component';
+import { HabilidadesComponent } from './habilidades/habilidades.component';
+import { ExperienciaLaboralComponent } from './experiencia-laboral/experiencia-laboral.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     DatosComponent,
-    CurriculumComponent
+    CurriculumComponent,
+    HabilidadesComponent,
+    ExperienciaLaboralComponent
   ],
   imports: [
     BrowserModule,

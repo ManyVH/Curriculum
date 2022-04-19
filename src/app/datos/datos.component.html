@@ -95,17 +95,25 @@
                     <h4>Experiencia Laboral</h4>
                     <hr class="lineasC">
                     <div id="experiencia">
-                        <div id="0"></div>
+                        <app-experiencia-laboral id="0"></app-experiencia-laboral>
                     </div>
-                    <button class="btnMas" ><img src="./assets/add.png" ></button>
+                    <div class="formatoBtn">
+                        <button class="btnMas"><img src="./assets/add.png" ></button>
+                    </div>
                 </div>
                 <div class="ps-3">
                     <h4>Habilidades</h4>
-                    <hr class="lineasC">
-                    <div id="habilidades">
-                        <div id="0"></div>
+                        <hr class="lineasC" />
+                        <div id="habilidades" >
+                            <div *ngFor="let item of datos.contarHab; let i=index">
+                                <app-habilidades id="{{i}}"></app-habilidades>
+                                
+                            </div>
+                        </div>
+                    <div class="formatoBtn">
+                        <button class="btnMas"  (click)="agregarHab()"><img src="./assets/add.png" ></button>
                     </div>
-                    <button class="btnMas" ><img src="./assets/add.png" ></button>
+                    
                 </div>
             </div>
             <button class="btnCrear" routerLink="/curriculum" (click)="pasarPagina()">Crear</button>
@@ -113,5 +121,4 @@
         </div>
     </div>
 </body>
-    
 

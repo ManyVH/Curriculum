@@ -1,0 +1,90 @@
+.formato{
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    width: 60%;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.486);
+}
+
+input{
+    border: 2px solid gainsboro;
+    border-radius: 5px;
+    
+}
+input:focus{
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.486);
+    
+}
+.fechas{
+    width: 50%;
+    border: 1px solid gainsboro;
+    background-color: rgb(241, 239, 239);
+    padding: none;
+    
+}
+.fechas input{
+    border: none;
+    background-color: rgb(241, 239, 239);
+    width: 100%;
+    
+}
+.btnBorrar{
+    border-radius: 30px;
+    width: 5%;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0);
+    border-style: none;
+    
+}
+
+@media screen and (min-width: 450px ) and (max-width: 1200px){
+   
+    .fechas{
+        width: 55%;
+        
+        
+    }
+    .formato{
+        width: 70%;
+    }
+   
+    .fechas input{
+        border: none;
+        background-color: rgb(241, 239, 239);
+        width: 100%;
+    }
+    
+   
+    
+    
+}
+@media screen and (min-width: 1200px ){
+    
+    .fechas input{
+        border: none;
+        background-color: rgb(241, 239, 239);
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 450px ){
+  
+    .formato{
+        
+        width: 80%;
+        
+    }
+    
+    .fechas input{
+        border: none;
+        background-color: rgb(241, 239, 239);
+        width: 100%;
+    }
+
+   
+   
+}

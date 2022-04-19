@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { ServcioDatosService } from '../servcio-datos.service';
 
 @Component({
   selector: 'app-datos',
@@ -6,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./datos.component.css']
 })
 export class DatosComponent implements OnInit {
-
-  constructor() { }
+  
+  constructor( public datos: ServcioDatosService) { }
 
   ngOnInit(): void {
   }
@@ -15,17 +16,9 @@ export class DatosComponent implements OnInit {
   foto:string = '';
   nombre:string ='';
   apellido:string ='';
-
   
-  public get getFoto() : string {
-    return this.foto;
-  }
-  public get getNombre() : string {
-    return this.nombre;
-  }
-  public get getApellido() : string {
-    return this.apellido;
-  }
+  
+  
   
   agregarEmail(){
     const emailEstructura = <HTMLDivElement> document.getElementById('emails')!.firstChild;
@@ -54,7 +47,14 @@ export class DatosComponent implements OnInit {
     console.log(document.getElementById('academia')!.childNodes);
   }
 
-
+  agregarHab(){
+    //Crear Servicio para esta cosa fea
+    this.datos.contarHab.push(this.datos.contarHab.length)
+    
+    console.log(document.getElementById('habilidades')!.children);
+  }
+  
+  
   pasarPagina(){
     console.log(this.foto);
     console.log(this.nombre);
