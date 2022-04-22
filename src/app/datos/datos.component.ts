@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component,  OnInit } from '@angular/core';
 import { ServcioDatosService } from '../servcio-datos.service';
 
 @Component({
@@ -13,51 +13,52 @@ export class DatosComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  foto:string = '';
-  nombre:string ='';
-  apellido:string ='';
+  
   
   
   
   
   agregarEmail(){
-    const emailEstructura = <HTMLDivElement> document.getElementById('emails')!.firstChild;
-    const nuevo =<HTMLSpanElement> emailEstructura.cloneNode(true);
-    nuevo.setAttribute('id',''+document.getElementById('emails')!.childNodes.length);
-    console.log(document.getElementById('emails')!.childNodes.length);
-    document.getElementById('emails')!.appendChild(nuevo);
+    this.datos.contarEmails.push(this.datos.contarEmails[this.datos.contarEmails.length-1]+1)
     
   }
+  borrarEmails(id:number){
+    
+      this.datos.contarEmails.splice(id,1)
+      
+      this.datos.datosPersonales.emails.splice(id, 1)
+      
+  }
+
+
+
+  borrarTelefonos(id:number){
+    
+    this.datos.contarTelefonos.splice(id,1)
+      
+      this.datos.datosPersonales.telefonos.splice(id, 1)
+      
+  }
+  
   agregarTelefono(){
-    const emailEstructura = <HTMLDivElement> document.getElementById('telefonos')!.lastChild;
-    const nuevo =<HTMLSpanElement> emailEstructura.cloneNode(true);
-    nuevo.setAttribute('id',''+document.getElementById('telefonos')!.childNodes.length)
-    document.getElementById('telefonos')!.appendChild(nuevo);
+    this.datos.contarTelefonos.push(this.datos.contarTelefonos[this.datos.contarTelefonos.length-1]+1)
     
   }
 
   agregarAcademia(){
-    const emailEstructura = <HTMLDivElement> document.getElementById('academia')!.lastChild;
-    const nuevo =<HTMLDivElement> emailEstructura.cloneNode(true);
-    document.getElementById('academia')!.appendChild(document.createElement('br'));
-    let id:string =<string> emailEstructura!.getAttribute('id');
-    
-    nuevo.setAttribute('id',''+(Number.parseInt(id)+1))
-    document.getElementById('academia')!.appendChild(nuevo);
-    console.log(document.getElementById('academia')!.childNodes);
+    this.datos.contarAca.push(this.datos.contarAca[this.datos.contarAca.length-1]+1)
   }
 
   agregarHab(){
     //Crear Servicio para esta cosa fea
-    this.datos.contarHab.push(this.datos.contarHab.length)
+    this.datos.contarHab.push(this.datos.contarHab[this.datos.contarHab.length-1]+1)
     
-    console.log(document.getElementById('habilidades')!.children);
+  }
+  
+  agregarExp(){
+    this.datos.contarExp.push(this.datos.contarExp[this.datos.contarExp.length-1]+1)
+    
   }
   
   
-  pasarPagina(){
-    console.log(this.foto);
-    console.log(this.nombre);
-    console.log(this.apellido);
-  }
 }

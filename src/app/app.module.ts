@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { CurriculumComponent } from './curriculum/curriculum.component';
 import { HabilidadesComponent } from './habilidades/habilidades.component';
 import { ExperienciaLaboralComponent } from './experiencia-laboral/experiencia-laboral.component';
+import { FormacionAcademicaComponent } from './formacion-academica/formacion-academica.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ExperienciaLaboralComponent } from './experiencia-laboral/experiencia-l
     DatosComponent,
     CurriculumComponent,
     HabilidadesComponent,
-    ExperienciaLaboralComponent
+    ExperienciaLaboralComponent,
+    FormacionAcademicaComponent
   ],
   imports: [
     BrowserModule,

@@ -12,15 +12,15 @@
                         <section #datosEstaticosP >
                             <div class="datosPE">
                             <label for="Fotografía">Fotografía:  &nbsp;</label>
-                            <input type="url" [(ngModel)]="foto" name="Fotografía" placeholder="URL">
+                            <input type="url" [(ngModel)]="datos.datosPersonales.foto"  name="Fotografía" placeholder="URL">
 
                             
                             <label for="nombre" class="etiquetas">Nombre:  &nbsp;</label>
-                            <input type="text" [(ngModel)]="nombre" name="nombre" placeholder="Nombre">
+                            <input type="text" [(ngModel)]="datos.datosPersonales.nombre" name="nombre" placeholder="Nombre">
 
                             
                             <label for="apellido " class="etiquetas">Apellidos:  &nbsp;</label>
-                            <input type="text" [(ngModel)]="apellido" name="apellido" placeholder="Apellidos">
+                            <input type="text" [(ngModel)]="datos.datosPersonales.apellidos" name="apellido" placeholder="Apellidos">
 
                             </div>
                         </section>
@@ -31,8 +31,13 @@
                             <h6>Emails</h6>
                             <!-- emails dinamicos -->
                             <div id="emails" >
+                                <div id="emails">
+                                    <div *ngFor="let item of datos.contarEmails; let i=index">
+                                        <span id="{{i}}"><input [(ngModel)]="datos.datosPersonales.emails[i]" type="email" placeholder="Email">  <button class="btnBorrar" (click)="borrarEmails(i)"><img src="./assets/trash.png" alt=""></button></span>
+                                    </div>
+                                    
+                                </div>
                                 
-                                <span id="0"><input type="email" placeholder="Email">  <button class="btnBorrar"><img src="./assets/trash.png" alt=""></button></span>
                                 
                             </div>
 
@@ -43,7 +48,10 @@
                             <h6>Telefonos</h6>
                             <!-- Telefonos dinamicos -->
                             <div id="telefonos">
-                                <span id="0"><input type="text" placeholder="Teléfono">  <button class="btnBorrar"><img src="./assets/trash.png" alt=""></button></span>
+                                <div *ngFor="let item of datos.contarTelefonos; let i=index">
+                                    <span id="{{i}}"><input [(ngModel)]="datos.datosPersonales.telefonos[i]" type="text" placeholder="Teléfono">  <button class="btnBorrar" (click)="borrarTelefonos(i)"><img src="./assets/trash.png" alt=""></button></span>
+                                </div>
+                                
                             </div>
 
                             <div class="acomodo pe-4">
@@ -60,30 +68,10 @@
                     <hr class="lineasC">
                     <section  class="secciones">
                         <div id="academia" class="ps-3">
-
-                            <div id="0" class="formato">
-                                
-                                    <label for="grado">Grado:  &nbsp;</label>
-                                    <input type="text" name="grado" placeholder="Grado Académico">
-                                    <label for="ins">Institución:  &nbsp;</label>
-                                    <input type="text" name="ins" placeholder="Institución">
-                                    
-                                <div class="d-flex flex-row m-1">
-                                    <div id="inicio" class="fechas">
-                                        <label for="fechaI">Inicio</label>
-                                        <input type="number" name="fechaI" min="1900" max="2099" step="1" value="2014">
-                                    </div>
-                                    
-                                    <div id="fin" class="fechas">
-                                        <label for="fin">Finalización</label>
-                                        <input type="number" name="fin" min="1900" max="2099" step="1" value="2016">
-                                    </div>
-                                    
-                                    &nbsp;
-                                    <button class="btnBorrar"><img src="./assets/trash.png" alt=""></button>
-                                </div>
+                            <div *ngFor="let item of datos.contarAca; let i=index">
+                                <app-formacion-academica [id]="i"></app-formacion-academica>
                             </div>
-                            
+
                         </div>
                         <div class="formatoBtn">
                             <button class="btnMas" (click)="agregarAcademia()"><img src="./assets/add.png" ></button>
@@ -95,10 +83,12 @@
                     <h4>Experiencia Laboral</h4>
                     <hr class="lineasC">
                     <div id="experiencia">
-                        <app-experiencia-laboral id="0"></app-experiencia-laboral>
+                        <div *ngFor="let item of datos.contarExp; let i=index">
+                        <app-experiencia-laboral [id]="i"></app-experiencia-laboral>
+                    </div>
                     </div>
                     <div class="formatoBtn">
-                        <button class="btnMas"><img src="./assets/add.png" ></button>
+                        <button class="btnMas" (click)="agregarExp()"><img src="./assets/add.png" ></button>
                     </div>
                 </div>
                 <div class="ps-3">
@@ -106,7 +96,7 @@
                         <hr class="lineasC" />
                         <div id="habilidades" >
                             <div *ngFor="let item of datos.contarHab; let i=index">
-                                <app-habilidades id="{{i}}"></app-habilidades>
+                                <app-habilidades [id]="i"></app-habilidades>
                                 
                             </div>
                         </div>
@@ -116,7 +106,7 @@
                     
                 </div>
             </div>
-            <button class="btnCrear" routerLink="/curriculum" (click)="pasarPagina()">Crear</button>
+            <button class="btnCrear" routerLink="/curriculum" >Crear</button>
             
         </div>
     </div>

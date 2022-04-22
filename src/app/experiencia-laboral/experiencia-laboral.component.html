@@ -1,10 +1,24 @@
-<div id="0" class="formato">
+<div class="formato">
                                 
-    <label for="grado">Grado:  &nbsp;</label>
-    <input type="text" name="grado" placeholder="Grado Académico">
-    <label for="ins">Institución:  &nbsp;</label>
-    <input type="text" name="ins" placeholder="Institución">
-    
+    <label for="puesto">Puesto:  &nbsp;</label>
+    <input type="text" name="puesto" placeholder="Puesto">
+    <label for="empresa">Empresa:  &nbsp;</label>
+    <input type="text" name="empresa" placeholder="empresa">
+    &nbsp;
+    <div #responsabilidades id="responsabilidades">
+        <div *ngFor="let item of respon; let i=index">
+            <div  id="{{i}}" >
+                <div class="formato">
+                    <label >Responsabilidad:  &nbsp;</label>
+                <input type="text"  placeholder="Responsabilidad">
+                <button class="btnBorrar" (click)="borrar(i)"><img src="./assets/trash.png" alt=""></button>
+                </div>
+                <br>
+            </div>
+            
+        </div>
+    </div>
+    <button class="btnMas" (click)="agregarRes()"><img src="./assets/add.png" ></button>
 <div class="d-flex flex-row m-1">
     <div id="inicio" class="fechas">
         <label for="fechaI">Inicio</label>
@@ -17,6 +31,7 @@
     </div>
     
     &nbsp;
-    <button class="btnBorrar"><img src="./assets/trash.png" alt=""></button>
+    <button class="btnBorrar" (click)="borrarExp()"><img src="./assets/trash.png" alt=""></button>
 </div>
 </div>
+<br>

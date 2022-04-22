@@ -3,3 +3,13 @@
 
     font-family: 'Roboto', sans-serif;
 }
+
+
+@media screen and (max-width: 450px ){
+  
+    html{
+        font-size: 12px;
+    }
+   
+   
+}

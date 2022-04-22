@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ServcioDatosService } from '../servcio-datos.service';
 
 @Component({
@@ -8,39 +8,25 @@ import { ServcioDatosService } from '../servcio-datos.service';
 })
 export class HabilidadesComponent implements OnInit {
 
+  @Input() id = 0
   constructor(public datos: ServcioDatosService) { }
 
   ngOnInit(): void {
   }
-
-  estrellasDominio(value:string, padre:HTMLDivElement){
-    
-    console.log(padre);
-    const paso =<HTMLSpanElement>  padre!.getElementsByClassName('estrellas')[0];
-    const span = document.createElement('span');
-    
-
-    paso.removeChild(<HTMLSpanElement>paso!.firstChild)
+   estrellas:number[]=[0]
+  estrellasDominio(value:string){
+    let est:number[] =[]
     for (let index = 0; index < Number.parseInt(value); index++) {
-      const imagen = document.createElement('img');
-    imagen.src = './assets/star.png'
-      span.append(imagen)
-      
+      est.push(index)
     }
-    paso.appendChild(span)
+    this.estrellas = est
     
   }
 
-  borrar(evento:HTMLDivElement){
-    
-    let padre = <HTMLDivElement> evento!.parentNode;
-    let id = padre.getAttribute('id');
-    let indice = Number.parseInt(<string>id)
-    console.log(this.datos.contarHab );
-    console.log(id);
+  borrar(){
     let nuevo:number[] = []
     for (let index = 0; index < this.datos.contarHab.length; index++) {
-      if (indice!==index) {
+      if (this.id!==index) {
         nuevo.push(this.datos.contarHab[index])
       }
       
