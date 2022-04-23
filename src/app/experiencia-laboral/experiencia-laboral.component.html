@@ -1,16 +1,16 @@
 <div class="formato">
                                 
     <label for="puesto">Puesto:  &nbsp;</label>
-    <input type="text" name="puesto" placeholder="Puesto">
+    <input type="text" [(ngModel)]="datos.datosExpLaboral[this.id].puesto" (keyup)="clg()" name="puesto" placeholder="Puesto">
     <label for="empresa">Empresa:  &nbsp;</label>
-    <input type="text" name="empresa" placeholder="empresa">
+    <input type="text" [(ngModel)]="datos.datosExpLaboral[this.id].empresa" name="empresa" placeholder="empresa">
     &nbsp;
     <div #responsabilidades id="responsabilidades">
         <div *ngFor="let item of respon; let i=index">
             <div  id="{{i}}" >
                 <div class="formato">
                     <label >Responsabilidad:  &nbsp;</label>
-                <input type="text"  placeholder="Responsabilidad">
+                <input type="text" [(ngModel)]="datos.datosExpLaboral[this.id].responsabilidades[i]"  placeholder="Responsabilidad">
                 <button class="btnBorrar" (click)="borrar(i)"><img src="./assets/trash.png" alt=""></button>
                 </div>
                 <br>
@@ -22,12 +22,12 @@
 <div class="d-flex flex-row m-1">
     <div id="inicio" class="fechas">
         <label for="fechaI">Inicio</label>
-        <input type="number" name="fechaI" min="1900" max="2099" step="1" value="2014">
+        <input type="number" [(ngModel)]="datos.datosExpLaboral[this.id].fechaInicio"  name="fechaI" min="1900" max="2099" step="1" value="2014">
     </div>
     
     <div id="fin" class="fechas">
         <label for="fin">Finalización</label>
-        <input type="number" name="fin" min="1900" max="2099" step="1" value="2016">
+        <input type="number" [(ngModel)]="datos.datosExpLaboral[this.id].fechaFin" name="fin" min="1900" max="2099" step="1" value="2016">
     </div>
     
     &nbsp;

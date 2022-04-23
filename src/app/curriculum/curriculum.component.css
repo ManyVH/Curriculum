@@ -1,0 +1,44 @@
+.contenido{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.curriculum{
+    width: 70%;
+    height: 90vh;
+    background-color: rgb(246, 246, 246);
+    border: 1px solid rgba(128, 128, 128, 0.883);
+    box-shadow: 1px 1px 8px rgba(54, 54, 54, 0.497);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.encabezado{
+    display: flex;
+    flex-direction: row;
+    height: 30vh;
+    border-radius: 10px;
+}
+.perfil img{
+    margin: 50px;
+    border-radius: 50%;
+}
+.perfil{
+    width: 35%;
+    background-color: rgba(238, 237, 237, 0.883);
+    border-radius: 10px;
+}
+.titulo{
+    background: linear-gradient(45deg, rgba(238, 237, 237, 0.883) 90%, #750550 10%);
+    border-radius: 10px;
+}   
+.titulo h1{
+    padding-top: 30px;
+    font-size: 60px;
+}

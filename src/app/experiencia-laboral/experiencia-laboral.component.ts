@@ -23,24 +23,17 @@ export class ExperienciaLaboralComponent implements OnInit {
   }
 
   borrar(idPaso:number){
-      
-      let nuevo: number[] = []
-      for (let index = 0; index < this.respon.length; index++) {
-        if (index!== idPaso) {
-          nuevo.push(this.respon[index])
-        }
-      }
-      this.respon = nuevo
+      this.respon.splice(idPaso,1)
+      this.datos.datosExpLaboral[this.id].responsabilidades.splice(idPaso,1)
       
 
   }
   borrarExp(){
-    let nuevo: number[] = []
-      for (let index = 0; index < this.datos.contarExp.length; index++) {
-        if (index!== this.id) {
-          nuevo.push(this.datos.contarExp[index])
-        }
-      }
-      this.datos.contarExp = nuevo
+    this.datos.contarExp.splice(this.id,1)
+    this.datos.datosExpLaboral.splice(this.id,1)
+  }
+
+  clg(){
+    console.log(this.datos.datosExpLaboral);
   }
 }

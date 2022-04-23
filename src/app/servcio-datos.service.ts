@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { DatosPersonales } from './datos.modelo';
+import { DatosPersonales, DatosAcademicos, DatosExperiencia, DatosHabilidades } from './datos.modelo';
 
 @Injectable({
   providedIn: 'root',
@@ -22,4 +22,24 @@ export class ServcioDatosService {
     emails: [],
     telefonos: [],
   };
+
+  datosAcademicos: DatosAcademicos[] =[{
+    grado: '',
+    institucion: '',
+    fechaInicio: 2016,
+    fechaFin: 2017
+  }]
+
+  datosExpLaboral: DatosExperiencia[] =[{
+    puesto: '',
+    empresa: '',
+    responsabilidades: [],
+    fechaInicio: 2016,
+    fechaFin: 2017
+  }]
+
+  datosHabilidades: DatosHabilidades[] =[{
+    habilidad: '',
+    dominio: 0
+  }]
 }

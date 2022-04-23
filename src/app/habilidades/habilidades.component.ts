@@ -24,14 +24,7 @@ export class HabilidadesComponent implements OnInit {
   }
 
   borrar(){
-    let nuevo:number[] = []
-    for (let index = 0; index < this.datos.contarHab.length; index++) {
-      if (this.id!==index) {
-        nuevo.push(this.datos.contarHab[index])
-      }
-      
-    }
-    this.datos.contarHab = nuevo
-    console.log(this.datos.contarHab );
+    this.datos.contarHab.splice(this.id,1)
+    this.datos.datosHabilidades.splice(this.id,1)
   }
 }

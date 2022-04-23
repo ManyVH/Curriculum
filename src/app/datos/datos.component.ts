@@ -47,17 +47,32 @@ export class DatosComponent implements OnInit {
 
   agregarAcademia(){
     this.datos.contarAca.push(this.datos.contarAca[this.datos.contarAca.length-1]+1)
+    this.datos.datosAcademicos.push({
+      grado: '',
+      institucion: '',
+      fechaInicio: 2016,
+      fechaFin: 2017
+    })
   }
 
   agregarHab(){
     //Crear Servicio para esta cosa fea
     this.datos.contarHab.push(this.datos.contarHab[this.datos.contarHab.length-1]+1)
-    
+    this.datos.datosHabilidades.push({
+      habilidad: '',
+      dominio: 0
+    })
   }
   
   agregarExp(){
     this.datos.contarExp.push(this.datos.contarExp[this.datos.contarExp.length-1]+1)
-    
+    this.datos.datosExpLaboral.push({
+      puesto: '',
+      empresa: '',
+      responsabilidades: [],
+      fechaInicio: 2016,
+      fechaFin: 2017
+    })
   }
   
   

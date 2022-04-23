@@ -2,7 +2,7 @@
   <div #prin class="habilidades">
     <span>
       <label for="hab">Habilidad:</label>
-      <input type="text" name="hab" placeholder="Habilidad" />
+      <input type="text" [(ngModel)]="datos.datosHabilidades[this.id].habilidad" name="hab" placeholder="Habilidad" />
     </span>
 
     <div class="subHab">
@@ -14,6 +14,7 @@
         <input
           #valor
           (change)="estrellasDominio(valor.value)"
+          [(ngModel)]="datos.datosHabilidades[this.id].dominio"
           type="range"
           min="1"
           max="5"

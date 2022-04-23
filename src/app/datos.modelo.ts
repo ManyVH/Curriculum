@@ -6,4 +6,24 @@ export interface DatosPersonales {
     emails: string[];
     telefonos: string[];
   }
+
+export interface DatosAcademicos{
+    grado: string;
+    institucion: string;
+    fechaInicio: number;
+    fechaFin: number;
+}
+
+export interface DatosExperiencia{
+  puesto: string;
+  empresa: string;
+  responsabilidades: string[];
+  fechaInicio: number;
+  fechaFin: number;
+}
+
+export interface DatosHabilidades{
+  habilidad: string;
+  dominio: number;
   
+}

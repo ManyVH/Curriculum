@@ -14,12 +14,9 @@ export class FormacionAcademicaComponent implements OnInit {
   }
 
   borrarAca(){
-    let nuevo: number[] = []
-      for (let index = 0; index < this.datos.contarAca.length; index++) {
-        if (index!== this.id) {
-          nuevo.push(this.datos.contarAca[index])
-        }
-      }
-      this.datos.contarAca = nuevo
+    this.datos.contarAca.splice(this.id,1)
+    this.datos.datosAcademicos.splice(this.id,1)
   }
+
+  
 }
