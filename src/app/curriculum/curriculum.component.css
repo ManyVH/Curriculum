@@ -10,13 +10,13 @@
 .curriculum{
     width: 70%;
     height: 90vh;
-    background-color: rgb(246, 246, 246);
+    background-color: white;
     border: 1px solid rgba(128, 128, 128, 0.883);
     box-shadow: 1px 1px 8px rgba(54, 54, 54, 0.497);
     border-radius: 10px;
     display: flex;
-    flex-direction: row;
-
+    flex-direction: column;
+    overflow-y: scroll;
 }
 
 .encabezado{
@@ -24,21 +24,55 @@
     flex-direction: row;
     height: 30vh;
     border-radius: 10px;
+    position: relative;
 }
 .perfil img{
     margin: 50px;
     border-radius: 50%;
+    border: 4px solid #750550;
+    margin-left: 60px;
+    
 }
 .perfil{
     width: 35%;
     background-color: rgba(238, 237, 237, 0.883);
-    border-radius: 10px;
+    border-top-left-radius: 10px;
 }
 .titulo{
     background: linear-gradient(45deg, rgba(238, 237, 237, 0.883) 90%, #750550 10%);
-    border-radius: 10px;
+    border-top-right-radius: 10px;
 }   
 .titulo h1{
     padding-top: 30px;
     font-size: 60px;
+    color: #750550;
+    font-style: italic;
+    font-weight: bold;
+    
+}
+
+.datosGenerales{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 70vh;
+    
+}
+.datosPH{
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100vh;
+    
+}
+.contenidoPH{
+    width: 80%;
+    height: 70vh;
+    background-color: #750550;
+    
+}
+.datosAL{
+    background-color: white;
+    width: 75%;
 }
