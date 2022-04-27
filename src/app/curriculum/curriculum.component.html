@@ -1,17 +1,66 @@
 <div class="contenido">
     <div class="curriculum">
         <div class="encabezado">
-            <div class="perfil"><img src="./assets/cat.jpg" width="200" height="200" alt=""></div>
-            <div class="titulo"><h1>José Manuel Varela Hernandez</h1></div>
+            <ng-container *ngIf="datos.datosPersonales.foto; else elseTemplate">
+                <div class="perfil"><img  src="{{datos.datosPersonales.foto}}" width="200" height="200" alt=""></div>
+            </ng-container>
+            <ng-template #elseTemplate>
+                <div class="perfil"><img  src="./assets/cat.jpg" width="200" height="200" alt=""></div>
+            </ng-template>
+            
+            
+            <div class="titulo"><h1>{{datos.datosPersonales.nombre}}&nbsp; {{datos.datosPersonales.apellidos}}</h1></div>
         </div>
 
         <div class="datosGenerales">
             <div class="datosPH">
                 <div class="contenidoPH">
+                    <div class="habilidades">
+                        <h4>Habilidades</h4>
+                        <hr class="lineas">
+                        <li class="pad" *ngFor="let item of datos.datosHabilidades; let i=index">{{item.habilidad}} <span><img *ngFor="let item of datos.datosHabilidades[i].dominio" src="./assets/star.png" alt=""></span></li>
+                    </div>
+                    <div class="contacto">
+                        <h4>Contacto</h4>
+                        <hr class="lineas">
+                        <div >
+                            <h5 class="ps-1">Teléfono</h5>
+                            <p class="pad" *ngFor="let tel of datos.datosPersonales.telefonos">{{tel}}</p>
+                            <h5 class="ps-1">Email</h5>
+                            <p  class="pad" *ngFor="let email of datos.datosPersonales.emails">{{email}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="datosAL">
+                <div class=" m-4 formatoAL">
+                    <h3 class="tituloFormato">Experiencia Laboral</h3>
+                    <div class="ps-5">
+                        
+                    <div *ngFor="let item of datos.datosExpLaboral; let i=index">
+                        <p>{{datos.datosExpLaboral[i].fechaInicio}}<span>--</span>{{datos.datosExpLaboral[i].fechaFin}} </p>
+                        <h6>{{datos.datosExpLaboral[i].empresa}}</h6>
+                        <p>Desempeñe el puesto de {{datos.datosExpLaboral[i].puesto}}</p>
+                        <h6>Responsabilidades desempeñadas</h6>
+                        <li class="ps-5 lista" *ngFor="let item of datos.datosExpLaboral[i].responsabilidades;"> {{item}}</li>
+                        <hr>
+                    </div>
+                    </div>
+                </div>
+                <div class=" m-4 formatoAL">
+                    <h3 class="tituloFormato">Formación Académica</h3>
+                    <div class="ps-5">
+                        
+                    <div *ngFor="let item of datos.datosAcademicos; let i=index">
+                        <p>{{datos.datosAcademicos[i].fechaInicio}}<span>--</span>{{datos.datosAcademicos[i].fechaFin}} </p>
+                        <h6>{{datos.datosAcademicos[i].institucion}}</h6>
+                        <p>Termine el grado de {{datos.datosAcademicos[i].grado}}</p>
+                        <hr>
+                    </div>
+                    </div>
                     
                 </div>
             </div>
-            <div class="datosAL"></div>
         </div>
     </div>
 </div>

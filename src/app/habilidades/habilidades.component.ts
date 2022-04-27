@@ -20,7 +20,7 @@ export class HabilidadesComponent implements OnInit {
       est.push(index)
     }
     this.estrellas = est
-    
+    this.datos.datosHabilidades[this.id].dominio = this.estrellas;
   }
 
   borrar(){

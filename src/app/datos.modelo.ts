@@ -24,6 +24,6 @@ export interface DatosExperiencia{
 
 export interface DatosHabilidades{
   habilidad: string;
-  dominio: number;
+  dominio: number[];
   
 }

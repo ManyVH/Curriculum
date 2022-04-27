@@ -60,7 +60,7 @@ export class DatosComponent implements OnInit {
     this.datos.contarHab.push(this.datos.contarHab[this.datos.contarHab.length-1]+1)
     this.datos.datosHabilidades.push({
       habilidad: '',
-      dominio: 0
+      dominio: [0]
     })
   }
   

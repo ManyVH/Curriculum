@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { DatosPersonales, DatosAcademicos, DatosExperiencia, DatosHabilidades } from './datos.modelo';
+import {  DatosAcademicos, DatosExperiencia, DatosHabilidades, DatosPersonales } from './datos.modelo';
 
 @Injectable({
   providedIn: 'root',
@@ -40,6 +40,6 @@ export class ServcioDatosService {
 
   datosHabilidades: DatosHabilidades[] =[{
     habilidad: '',
-    dominio: 0
+    dominio: [0]
   }]
 }
