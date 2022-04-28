@@ -25,9 +25,12 @@
                         <hr class="lineas">
                         <div >
                             <h5 class="ps-1">Teléfono</h5>
-                            <p class="pad" *ngFor="let tel of datos.datosPersonales.telefonos">{{tel}}</p>
+                            <p  class="pad" *ngFor="let tel of datos.datosPersonales.telefonos">{{tel}}</p>
                             <h5 class="ps-1">Email</h5>
-                            <p  class="pad" *ngFor="let email of datos.datosPersonales.emails">{{email}}</p>
+                            <div class="email"> 
+                                <p  class="pad " *ngFor="let email of datos.datosPersonales.emails">{{email}}</p>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>

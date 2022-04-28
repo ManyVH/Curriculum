@@ -16,7 +16,7 @@
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    overflow-y: scroll;
+    
 }
 
 .encabezado{
@@ -64,7 +64,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 100vh;
+    height: 50vh;
     
 }
 li{
@@ -76,7 +76,7 @@ li{
 }
 .contenidoPH{
     width: 100%;
-    height: 100vh;
+    
     background-color: #4C0027;
     padding-top: 50px;
     border-bottom-right-radius: 5px;
@@ -84,6 +84,7 @@ li{
 .datosAL{
     background-color: white;
     width: 75%;
+    overflow-y: scroll;
 }
 .habilidades{
     color:  rgb(255, 255, 255);
@@ -121,4 +122,120 @@ li{
 }
 .pad{
     padding-left: 5px;
+    color: rgb(249, 197, 133);
+}
+
+
+@media screen and (min-width: 900px ) and (max-width: 1600px){
+    
+    .curriculum{
+        width: 80%;
+        
+    }
+    .perfil img{
+        margin: 25px;
+        margin-left: 25px;
+        height: 200px;
+        width: 200px;
+    }
+    .titulo h1{
+        padding-top: 25px;
+        font-size: 45px;
+        
+        
+    }
+    .encabezado{
+       
+        height: 18vh;
+        
+    }
+}
+
+
+
+@media screen and (max-width: 900px ){
+    .perfil img{
+        margin: 15px;
+        margin-left: 20px;
+        
+        height: 100px;
+        width: 100px;
+    }
+    
+    .curriculum{
+        width: 90%;
+        
+    }
+    .titulo h1{
+        padding-top: 5px;
+        font-size: 35px;
+        
+        
+    }
+    p{
+        font-size: 15px;
+    }
+    .encabezado{
+       
+        height: 15vh;
+        
+    }
+    .habilidades p{
+        font-size: 15px;
+    }
+    .contacto p{
+        font-size: 15px;
+    }
+    .tituloFormato{
+        font-size: 22px;
+        width: 80%;
+    }
+    .email{
+        overflow-x: scroll;
+    }
+    .pad{
+        padding-left: 0px;
+    }
+}
+
+@media screen and (max-width: 400px ){
+    .perfil img{
+        margin: 10px;
+        margin-left: 8px;
+        margin-top: 30px;
+        height: 80px;
+        width: 80px;
+    }
+    
+    .curriculum{
+        width: 90%;
+        
+    }
+    .titulo h1{
+        padding-top: 2px;
+        font-size: 15px;
+        
+        
+    }
+    .encabezado{
+       
+        height: 15vh;
+        
+    }
+    .habilidades p{
+        font-size: 10px;
+    }
+    .contacto p{
+        font-size: 10px;
+    }
+    .tituloFormato{
+        font-size: 15px;
+        width: 80%;
+    }
+    .email{
+        overflow-x: scroll;
+    }
+    .pad{
+        padding-left: 0px;
+    }
 }
