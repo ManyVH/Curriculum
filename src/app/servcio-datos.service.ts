@@ -20,7 +20,7 @@ export class ServcioDatosService {
     apellidos: '',
     foto: '',
     emails: [],
-    telefonos: [],
+    telefonos:  [],
   };
 
   datosAcademicos: DatosAcademicos[] =[{
@@ -28,7 +28,8 @@ export class ServcioDatosService {
     institucion: '',
     fechaInicio: 2016,
     fechaFin: 2017
-  }]
+  }
+]
 
   datosExpLaboral: DatosExperiencia[] =[{
     puesto: '',
@@ -42,4 +43,5 @@ export class ServcioDatosService {
     habilidad: '',
     dominio: [0]
   }]
+  
 }

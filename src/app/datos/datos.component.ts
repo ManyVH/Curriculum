@@ -16,8 +16,6 @@ export class DatosComponent implements OnInit {
   
   
   
-  
-  
   agregarEmail(){
     this.datos.contarEmails.push(this.datos.contarEmails[this.datos.contarEmails.length-1]+1)
     
@@ -75,5 +73,6 @@ export class DatosComponent implements OnInit {
     })
   }
   
+ 
   
 }
